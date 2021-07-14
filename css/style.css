@@ -1,0 +1,605 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NanumsquareR';
+    src: url(../font/NanumSquareR.otf);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Galada|Nanum+Gothic|Nanum+Myeongjo);
+
+#wrap {
+    width: 100%;
+    min-width: 1280px;
+    overflow: hidden;
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+body {
+    color: #362a15;
+}
+/* ----top---- */
+
+header .top{
+    position: fixed;
+    top:50%;
+    right:150PX;
+    transform:translateY(-50%);
+    width: 48px;
+    height: 48px;
+    z-index: 1000;
+
+}
+header .top img{
+    width:100%;}
+/* -----popup------ */
+aside input {
+    display: none;
+}
+
+aside .popup {
+    width: 600px;
+    height: 300px;
+    background-color: #cce2c6;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    text-align: center;
+}
+
+aside .popup p {
+    font-size: 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    line-height: 35px;
+}
+
+aside .popup label {
+    display: block;
+    width: 100px;
+    height: 50px;
+    background-color: #377530;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#wrap .popup_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: #111;
+    z-index: 1000;
+    opacity: 0.6;
+}
+aside input[id=popup]:checked~.popup,
+aside input[id=popup]:checked~.popup_bg{
+    display: none;
+    
+}
+
+/* --------header------ */
+header {
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    background-color: rgba(243, 242, 242, 0.61);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* -------top menu------------- */
+header h1 {
+    float: left;
+    padding-top: 30px;
+}
+
+header nav .top_menu li {
+    float: left;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+header nav .top_menu .last {
+    width: 35px;
+}
+
+header nav .top_menu .glass {
+    width: 20px;
+    height: 20px;
+}
+
+header nav .top_menu .glass img {
+    width: 100%;
+}
+
+header .menu>li {
+    float: left;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+header nav .top_menu {
+    float: right;
+}
+
+header nav .top_menu li {
+    padding-top: 30px;
+}
+
+
+header nav .top_menu li a {
+    font-size: 13px;
+}
+
+/* -----sub menu----- */
+header .sub_menu {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    padding-top: 22px;
+}
+
+header .menu>li:hover .sub_menu {
+    display: block;
+}
+
+header .sub_menu li a {
+    display: block;
+    width: 100px;
+    line-height: 50px;
+    background-color: rgba(255, 255, 255, 0.61);
+    color: #362a15;
+    font-size: 15px;
+}
+
+header .sub_menu li a:hover {
+    color: #377530;
+    background-color: rgb(238, 236, 236);
+
+}
+
+/* -----header----- */
+header .inner {
+    position: relative;
+}
+
+header nav .menu {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+}
+
+header nav .menu .first {
+    padding-left: 0;
+}
+
+/* --------section1------ */
+
+
+.section_1 input {
+    display: none;
+}
+
+.section_1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section_1 .page {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.section_1 .page>label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.section_1 input[id=tab_btn_1]:checked~.page label[for=tab_btn_1],
+.section_1 input[id=tab_btn_2]:checked~.page label[for=tab_btn_2] {
+    background-color: #377530;
+}
+
+.section_1 .bg {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+
+}
+
+.section_1 .bg>div {
+    width: calc(100% / 2);
+    height: 100%;
+    float: left;
+}
+
+.section_1 .bg>div img {
+    width: 100%;
+
+}
+
+.section_1 input[id=tab_btn_1]:checked~.bg {
+    left: 0;
+}
+
+.section_1 input[id=tab_btn_2]:checked~.bg {
+    left: -100%;
+}
+
+/* ---arrow----- */
+
+.section_1 .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1240px;
+}
+
+.section_1 .arrow .control label {
+    cursor: pointer;
+    width: 20px;
+    height: 30px;
+}
+
+.section_1 .arrow .control {
+    display: none;
+}
+
+.section_1 .arrow .control label img {
+    width: 100%;
+}
+
+.section_1 .arrow .control .left {
+    position: absolute;
+    left: 30px;
+}
+
+.section_1 .arrow .control .right {
+    position: absolute;
+    right: 30px;
+}
+
+.section_1 .arrow .control {
+    display: none;
+}
+
+.section_1 input[id=tab_btn_1]:checked~.inner .arrow .control_1,
+.section_1 input[id=tab_btn_2]:checked~.inner .arrow .control_2 {
+    display: block;
+}
+
+/* ----seciont2-------- */
+.section_2 {
+    text-align: center;
+}
+
+.section_2 .plus {
+    width: 25px;
+    height: 25px;
+    float: right;
+}
+
+.section_2 .plus img {
+    width: 100%;
+}
+
+.section_2 .sec_icon {
+    width: 85px;
+    height: 33px;
+    padding: 20px 0px 0px 20px;
+
+}
+
+.section_2 .sec_icon img {
+    width: 100%;
+    float: left;
+}
+
+.section_2 ul {
+    padding-top: 10px;
+    float: left;
+}
+
+.section_2 ul li {
+    float: left;
+    width: 398px;
+    height: 586px;
+    margin-right: 20px;
+    border: 0.5px solid rgb(194, 191, 191);
+    position: relative;
+    cursor: pointer;
+}
+
+.section_2 ul .last {
+    margin-right: 0;
+}
+
+.section_2 article>h3 {
+    font-size: 39px;
+    font-weight: bold;
+    padding: 120px 0px 10px 0px;
+}
+
+.section_2 h3+p {
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.section_2 .pro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.section_2 .pro_sec {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.section_2 .pro_sec h3 {
+    padding-top: 30px;
+    font-size: 23px;
+}
+
+.section_2 .text_sec {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.section_2 .text_sec h4 {
+    font-size: 30px;
+    padding-top: 39px;
+}
+
+.section_2 .sale {
+    color: rgb(170, 170, 170);
+    text-decoration: line-through;
+    font-size: 22px;
+}
+
+.section_2 .text {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.section_2 .text_2 {
+    position: absolute;
+    left: 50%;
+    bottom: 42px;
+    transform: translateX(-50%);
+}
+
+.section_2 .text h3 {
+    margin-bottom: 20px;
+
+}
+
+.section_2 .text_2 h3 {
+    margin-bottom: 20px;
+
+}
+
+.section_2 .text_2 h4 {
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+.section_2 .text h4 {
+    font-size: 30px;
+}
+
+/* --------new--------- */
+.section_2 .pro_new_2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-36%, -70%);
+}
+
+.section_2 .pro_new_3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -70%);
+}
+
+
+/* -----banner---------- */
+.section_2 .banner {
+    background: url(../img/main_img/banner_re_2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 198px;
+    margin: 120px 0px;
+}
+
+.section_2 .banner .banner_1 {
+    font-size: 25px;
+    padding: 45px 0px 13px 0px;
+    color: #565656;
+}
+
+.section_2 .banner h3 {
+    font-size: 30px;
+    color: #565656;
+}
+
+.section_2 .banner .banner_2 {
+    font-size: 20px;
+    padding-top: 6px;
+    color: #9e9e9e;
+}
+
+
+/* -----section3-------- */
+
+.section_3 .inner {
+    text-align: center;
+}
+
+.section_3 article>h3 {
+    font-size: 39px;
+    font-weight: bold;
+    padding: 20px 0px 10px 0px;
+}
+
+.section_3 h3+p {
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.section_3 .solution ul li {
+    float: left;
+    width: calc((100% - 60px) / 4);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.section_3 .solution ul .last {
+    margin-right: 0;
+}
+
+.section_3 .solution .src {
+    position: relative;
+}
+
+.section_3 .solution .bg {
+    background-color: #111;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.section_3 .solution ul li:hover .src .bg {
+    opacity: 0.6;
+}
+
+.section_3 .solution .text {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    transition: all 0.5s;
+}
+
+.section_3 .solution ul li:hover .src .text {
+    top: 50%;
+}
+
+/* ---------footer------- */
+footer {
+    background-color: #d0d1cf;
+    height: 240px;
+    margin-top: 120px;
+
+}
+
+footer .left {
+    float: left;
+}
+
+footer .left h2 {
+    font-size: 35px;
+    padding-top: 30px;
+}
+
+footer .left h3 {
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+footer .left p {
+    padding-top: 10px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+/* ---right----- */
+footer .right {
+    float: right;
+}
+
+footer .right .icon {
+    float: left;
+    padding: 32px 0;
+}
+
+footer .right .icon li {
+    float: left;
+    width: 24px;
+    height: 24px;
+    padding-right: 15px;
+}
+
+footer .right .icon li img {
+    width: 100%;
+}
+
+/* ----text----- */
+
+footer .right .text li {
+    float: left;
+    margin-bottom: 10px;
+}
+
+footer .right .text li a {
+    padding-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .right .address p {
+    line-height: 30px;
+}

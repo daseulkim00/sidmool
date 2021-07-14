@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'kotra';
+    src: url(../font/KOTRA_BOLD.ttf);
+}
+
+#wrap {
+    width: 100%;
+    min-width: 1280px;
+    overflow: hidden;
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+section article h2 {
+    font-size: 30px;
+    margin: 15px 0;
+    font-family: 'kotra';
+}
+
+/* -------------------------------- */
+header {
+    background-color: lightcoral;
+    color: #fff;
+    height: 80px;
+}
+
+header h1 {
+    float: left;
+    line-height: 80px;
+    font-size: 40px;
+
+}
+
+header nav {
+    float: right;
+    text-align: center;
+}
+
+header nav .main_menu>li {
+    float: left;
+    cursor: pointer;
+}
+
+header nav .main_menu li span {
+    display: block;
+    line-height: 80px;
+    width: 150px;
+
+}
+
+header nav .main_menu li .sub_menu {
+    display: none;
+    position: absolute;
+    /* (밑에 메뉴가 떨어지면 자리 차지하니깐 자리 차리 안차지할려고
+    position:absolute; 써서  공중으로 띄워줌) */
+}
+
+header nav .main_menu li .sub_menu li a {
+    background-color: pink;
+    display: block;
+    width: 150px;
+    /* (position 상속 받을 수가 없어서 정확한 크기가 있어야한다.) */
+    line-height: 60px;
+}
+
+header nav .main_menu li:hover .sub_menu {
+    display: block;
+}
+
+header nav .main_menu li .sub_menu li:hover a {
+    background-color: rgb(255, 224, 229);
+    color: lightcoral;
+}
+
+/* ---header----- */
+
+/* section1>new_movie */
+.content_1 .new_movie {
+    width: 40%;
+    float: left;
+}
+
+.content_1 .new_movie .new_tab {
+    width: calc(100% - 10px);
+    height: 718px;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative;
+}
+
+.content_1 .new_movie .new_tab .tab_img {
+    position: relative;
+    top: 0;
+}
+
+.content_1 .new_movie .new_tab .tab_img img {
+    width: 100%;
+
+}
+
+/* -----tab----  */
+.content_1 .new_movie input {
+    display: none;
+}
+
+/* 밑에 버튼 세개 */
+.content_1 .new_movie .new_tab .page {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 100000;
+
+}
+
+.content_1 .new_movie .new_tab .page label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.3s;
+
+}
+
+.content_1 .new_movie input[id=tab_btn_1]:checked~.page label[for=tab_btn_1],
+.content_1 .new_movie input[id=tab_btn_2]:checked~.page label[for=tab_btn_2],
+.content_1 .new_movie input[id=tab_btn_3]:checked~.page label[for=tab_btn_3] {
+    background-color: lightcoral;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.content_1 .new_movie .new_tab .new_poster {
+    position: absolute;
+    width: 300%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+
+.content_1 .new_movie .new_tab .tab_img {
+    width: calc(100% / 3);
+    /* 위에 img태그를 100%를 줘서 300%를 상속받아서 따로 크기를 정해준다 */
+    float: left;
+    /* 블락이라서 밑으로 떨어져서 안보여서 플룻레프트 해준다 */
+}
+
+
+.content_1 .new_movie input[id=tab_btn_1]:checked~.new_poster {
+    left: 0;
+
+}
+
+.content_1 .new_movie input[id=tab_btn_2]:checked~.new_poster {
+    left: -100%;
+
+}
+
+.content_1 .new_movie input[id=tab_btn_3]:checked~.new_poster {
+    left: -200%;
+
+}
+
+/* arrow */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.arrow .control{
+    display: none;
+}
+
+.content_1 .new_movie .new_tab .arrow .control .left_arr {
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    display: block;
+    position: absolute;
+    left: 20px;
+    transform: rotate(-45deg);
+}
+
+.content_1 .new_movie .new_tab .arrow .control .right_arr {
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    display: block;
+    position: absolute;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+.content_1 .new_movie input[id=tab_btn_1]:checked~.arrow .control_1,
+.content_1 .new_movie input[id=tab_btn_2]:checked~.arrow .control_2,
+.content_1 .new_movie input[id=tab_btn_3]:checked~.arrow .control_3 {
+    display: block;
+}
+
+
+/* section1> movie_rank */
+.content_1 .movie_rank {
+    width: 60%;
+    float: right;
+}
+
+.content_1 .movie_rank li {
+    width: calc((100% - 20px) / 3);
+    height: 354px;
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.content_1 .movie_rank li.margin_z {
+    margin-right: 0;
+}
+
+.content_1 .movie_rank li .poster img {
+    width: 100%;
+    position: relative;
+    top: -1px;
+    /* (그림이 짤려서 네모 안에서 사진만 그정도 올려줄려고) */
+}
+
+.content_1 .movie_rank li .poster p {
+    display: none;
+}
+
+/* aside---------------------- */
+
+aside input {
+    display: none;
+}
+
+aside label {
+    position: fixed;
+    /* (픽스드 때문에 넓이,높이 가질수잇다) */
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+aside label[for=ticket_btn] {
+    background-color: lightcoral;
+    z-index: 100;
+}
+
+aside label[for=group_btn] {
+    background-color: lightpink;
+    z-index: 10;
+}
+
+aside label[for=photo_btn] {
+    background-color: lightsalmon;
+    z-index: 1;
+}
+
+.group_btn_pop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background-color: #eee;
+    display: none;
+
+}
+
+aside .group_btn_pop label.x {
+    background-color: #fff;
+    color: lightcoral;
+    box-shadow: 0 0 5px #aaa;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 20px;
+    top: 80%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* aside .group_btn_pop_bg{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgb(0,0,0,0.7);
+    z-index: 100;
+    display: none;
+} */
+
+aside input[id=ticket_btn]:checked~label[for=group_btn] {
+    top: calc(50% - 110px);
+}
+
+aside input[id=ticket_btn]:checked~label[for=photo_btn] {
+    top: calc(50% + 110px);
+}
+
+aside input[id=group_btn]:checked~.group_btn_pop,
+aside input[id=group_btn]:checked~.group_btn_pop_bg {
+    display: block;
+}

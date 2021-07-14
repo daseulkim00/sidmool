@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NanumsquareR';
+    src: url(../font/NanumSquareR.otf);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Galada|Nanum+Gothic|Nanum+Myeongjo);
+
+#wrap {
+    width: 100%;
+    min-width: 1280px;
+    overflow: hidden;
+
+}
+
+.inner {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+body {
+    color: #362a15;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 130px;
+    background-color: #cce2c6d3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+/* -------top menu------------- */
+header h1 {
+    float: left;
+    padding-top: 30px;
+}
+
+header nav .top_menu li {
+    float: left;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+}
+
+header nav .top_menu .last {
+    width: 35px;
+}
+
+header nav .top_menu .glass {
+    width: 20px;
+    height: 20px;
+}
+
+header nav .top_menu .glass img {
+    width: 100%;
+}
+
+header .menu>li {
+    float: left;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+
+header nav .top_menu {
+    float: right;
+}
+
+header nav .top_menu li {
+    padding-top: 30px;
+}
+
+
+header nav .top_menu li a {
+    font-size: 13px;
+}
+
+/* -----sub menu----- */
+header .sub_menu {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    padding-top: 22px;
+}
+
+header .menu>li:hover .sub_menu {
+    display: block;
+}
+
+header .sub_menu li a {
+    display: block;
+    width: 100px;
+    line-height: 50px;
+    /* background-color: rgba(255, 255, 255, 0.61); */
+    background-color: #cce2c6d3;
+    color: #362a15;
+    font-size: 15px;
+}
+
+header .sub_menu li a:hover {
+    color: #377530;
+    background-color: rgb(238, 236, 236);
+
+}
+
+/* -----header----- */
+header .inner {
+    position: relative;
+}
+
+header nav .menu {
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    top: 85px;
+    right: 0px;
+}
+
+header nav .menu .first {
+    padding-left: 0;
+}
+
+/* -----------login--------- */
+form {
+    width: 100%;
+    height: 690px;
+position:relative;
+}
+
+.sec_1 .inner .login {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.sec_1 .inner .login h2 {
+    font-size: 25px;
+    margin: 49px 0px 40px 0px;
+
+}
+
+.sec_1 .inner .login .table {
+    border: 1px solid #aca9a9;
+    width: 440px;
+    height: 400px;
+    border-radius: 0 50px 0 50px;
+}
+
+.sec_1 .inner .login .table input {
+    border: 1px solid #aca9a9;
+}
+
+
+
+.sec_1 .inner .login .table .icon {
+    width: 38px;
+    height: 38px;
+    float: left;
+
+}
+
+.sec_1 .inner .login .table .icon img {
+    width: 100%;
+}
+
+/* ----login 꾸미기------ */
+.sec_1 .inner .login .table input {
+    width: 338px;
+    height: 45px;
+}
+
+.sec_1 .inner .login .table .box_1,
+.sec_1 .inner .login .table .box_2 {
+    border: 1px solid #aca9a9;
+    color: #362a15;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.sec_1 .inner .login .table .box_1::placeholder,
+.sec_1 .inner .login .table .box_2::placeholder{
+    padding-left: 20px;
+    color:#aca9a9;
+}
+.sec_1 .inner .login .table .box_1 {
+    margin: 30px 0px 10px 0px;
+}
+
+.sec_1 .inner .login .table .find {
+    font-size: 13px;
+    color: #abaaaa;
+    float: right;
+    margin: 10px 47px 10px 0px;
+}
+
+.sec_1 .inner .login .table .find a {
+    margin-right: 5px;
+}
+
+.sec_1 .inner .login .table .login_btn {
+    background-color: #444444;
+    color: #f5f5f5;
+    border: none;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.sec_1 .inner .login .table .join_btn {
+    background-color: #69915f;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+    border:none;
+    cursor: pointer;
+}
+
+.sec_1 .inner .login .table p {
+    color: #444444;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.sec_1 .inner .login .table .naver {
+    margin: 0px 16px 0px 174px
+}
+
+/* -----------membership-------- */
+.sec_1 .member {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.sec_1 .member h2 {
+    font-size: 25px;
+    padding: 40px 0px;
+    line-height: 45px;
+}
+
+.sec_1 .member ul {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec_1 .member li {
+    float: left;
+    width: 146px;
+    height: 115px;
+    position: relative;
+    margin-right: 69px;
+}
+
+.sec_1 .member .last {
+    margin-right: 0px;
+}
+
+.sec_1 .member li>div {
+    width: 54px;
+    height: 41px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec_1 .member li>div img {
+    width: 100%;
+}
+
+.sec_1 .member li p {
+    font-size: 17px;
+    font-weight: bold;
+    padding-top: 75px;
+    line-height: 25px;
+}
+
+.sec_1 .member li p span {
+    color: #377530;
+}
+
+
+
+
+
+
+
+
+/* -------footer----- */
+footer {
+    background-color: #d0d1cf;
+    height: 240px;
+    margin-top: 120px;
+
+}
+
+footer .left {
+    float: left;
+}
+
+footer .left h2 {
+    font-size: 35px;
+    padding-top: 30px;
+}
+
+footer .left h3 {
+    font-size: 30px;
+    padding-top: 5px;
+}
+
+footer .left p {
+    padding-top: 10px;
+    line-height: 30px;
+    font-size: 15px;
+}
+
+/* ---right----- */
+footer .right {
+    float: right;
+}
+
+footer .right .icon {
+    float: left;
+    padding: 32px 0;
+}
+
+footer .right .icon li {
+    float: left;
+    width: 24px;
+    height: 24px;
+    padding-right: 15px;
+}
+
+footer .right .icon li img {
+    width: 100%;
+}
+
+/* ----text----- */
+
+footer .right .text li {
+    float: left;
+    margin-bottom: 10px;
+}
+
+footer .right .text li a {
+    padding-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+footer .right .address p {
+    line-height: 30px;
+}

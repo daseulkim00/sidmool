@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* google 웹폰트 css 파일 불러오기
+@import url(https://fonts.googleapis.com/css?family=Galada|Nanum+Gothic|Nanum+Myeongjo);
+
+.font_gothic {
+      font-family: 'Nanum Gothic', sans-serif;
+}
+
+.font_myeong {
+      font-family: 'Nanum Myeongjo', serif;
+}
+
+.font_galada {
+      font-family: 'Galada', cursive;
+} */
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
+ */
+
+* {
+      margin: 0;
+      padding: 0;
+}
+
+body {
+      font-size: 16px;
+      color: #6f6f6f;
+      font-family: 'NanumsquareR';
+      letter-spacing: -1px;
+}
+
+ul,
+ol,
+li {
+      list-style-type: none;
+}
+
+img,
+fieldset {
+      border: none;
+      vertical-align: middle
+}
+
+hr {
+      clear: both;
+      border: none
+}
+
+a {
+      color: inherit;
+      text-decoration: none
+}
+
+table {
+      border-collapse: collapse
+}
+
+input,
+textarea {
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      vertical-align: middle
+}
